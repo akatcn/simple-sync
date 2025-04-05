@@ -6,7 +6,7 @@ const server = http.createServer((req, res) => {
       timeStamp: performance.timeOrigin + performance.now(), // 현재 시간을 ms 단위로 반환
     };
 
-    res.writeHead(200, { "Content-Type": "application/json", "access-control-allow-origin": "*", "Timing-Allow-Origin": "http://127.0.0.1:5500/index.html" });
+    res.writeHead(200, { "Content-Type": "application/json", "access-control-allow-origin": "*", "Timing-Allow-Origin": "*" });
     res.end(JSON.stringify(response));
   } else {
     res.writeHead(404, { "Content-Type": "text/plain" });
